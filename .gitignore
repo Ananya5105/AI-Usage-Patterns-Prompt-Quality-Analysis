@@ -1,0 +1,19 @@
+# raw data — too large for GitHub
+raw_data/
+*.zip
+*.json
+*.pickle
+
+# cleaned data — push only if under 100MB, otherwise exclude
+# clean_data/
+
+# jupyter checkpoints
+.ipynb_checkpoints/
+
+# mac junk
+.DS_Store
+
+# python
+__pycache__/
+*.pyc
+*.pyo
