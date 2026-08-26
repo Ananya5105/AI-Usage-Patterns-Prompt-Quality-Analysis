@@ -11,3 +11,7 @@ oasst_predictions.csv
 oasst_predictions_full.csv
 
 .DS_Store
+
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+clean_data.zip
