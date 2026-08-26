@@ -1,19 +1,13 @@
-# raw data — too large for GitHub
-raw_data/
-*.zip
-*.json
-*.pickle
-
-# cleaned data — push only if under 100MB, otherwise exclude
-# clean_data/
-
-# jupyter checkpoints
-.ipynb_checkpoints/
-
-# mac junk
-.DS_Store
-
-# python
+.jupyter/
+notebooks/.jupyter/
 __pycache__/
 *.pyc
-*.pyo
+
+model.joblib
+
+athena_data/
+
+oasst_predictions.csv
+oasst_predictions_full.csv
+
+.DS_Store
