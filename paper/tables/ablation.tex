@@ -1,0 +1,11 @@
+\begin{tabular}{@{}lp{6.2cm}cc@{}}
+\toprule
+Configuration & Description & Accuracy & Macro-F1 \\
+\midrule
+Full text-feature RF & All 8 text features & 59.1\% & 0.576 \\
+Majority-class & Predicts most frequent training class & 33.7\% & 0.168 \\
+Length-only RF & \texttt{Word\_Count} alone as input & 66.3\% & 0.670 \\
+RF w/o length features & Removes unique ratio, punct, avg len & 46.5\% & 0.459 \\
+Residualised RF & Features regressed on $\log(\text{Word\_Count})$ & 66.2\% & 0.667 \\
+\bottomrule
+\end{tabular}

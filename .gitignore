@@ -3,7 +3,10 @@ notebooks/.jupyter/
 __pycache__/
 *.pyc
 
-model.joblib
+.venv/
+paper/*.aux
+paper/*.log
+paper/*.out
 
 athena_data/
 

@@ -233,7 +233,8 @@ print(classification_report(y_test, y_pred))
 import joblib
 
 joblib.dump(clf, "model.joblib")
-print("Saved model.joblib")
+joblib.dump(clf, "prompt_classifier.pkl")
+print("Saved model.joblib and prompt_classifier.pkl")
 
 # In[8]:
 

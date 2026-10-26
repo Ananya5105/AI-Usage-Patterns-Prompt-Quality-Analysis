@@ -1,0 +1,165 @@
+{
+  "dataset_counts": {
+    "oasst": 15708,
+    "lmsys": 39316,
+    "chatgpt": 153,
+    "survey": 3614,
+    "total": 58791
+  },
+  "main_model": {
+    "test_size": 3142,
+    "accuracy": 0.5907065563335455,
+    "macro_f1": 0.5758127326758375,
+    "top_feature": "unique_word_ratio",
+    "top_importance": 0.5194944418308859,
+    "feature_importances": {
+      "unique_word_ratio": 0.5194944418308859,
+      "punct_density": 0.14333558665275883,
+      "capital_ratio": 0.14232822266975234,
+      "avg_word_length": 0.11948568572582104,
+      "has_code_keywords": 0.026821452486456357,
+      "starts_with_wh": 0.024228257848105523,
+      "has_question_mark": 0.01361591988528555,
+      "has_please": 0.010690432900934507
+    },
+    "classification_report": {
+      "High": {
+        "precision": 0.6669381107491856,
+        "recall": 0.7890173410404624,
+        "f1-score": 0.7228596646072374,
+        "support": 1038.0
+      },
+      "Low": {
+        "precision": 0.580267558528428,
+        "recall": 0.6547169811320754,
+        "f1-score": 0.6152482269503546,
+        "support": 1060.0
+      },
+      "Moderate": {
+        "precision": 0.4777158774373259,
+        "recall": 0.328544061302682,
+        "f1-score": 0.38933030646992056,
+        "support": 1044.0
+      },
+      "accuracy": 0.5907065563335455,
+      "macro avg": {
+        "precision": 0.5749738489049799,
+        "recall": 0.5907594611584066,
+        "f1-score": 0.5758127326758375,
+        "support": 3142.0
+      },
+      "weighted avg": {
+        "precision": 0.5748251900198462,
+        "recall": 0.5907065563335455,
+        "f1-score": 0.5757327474170227,
+        "support": 3142.0
+      }
+    }
+  },
+  "ablations": [
+    {
+      "model": "Full text-feature RF",
+      "accuracy": 0.5907065563335455,
+      "macro_f1": 0.5758127326758375
+    },
+    {
+      "model": "Majority-class baseline",
+      "accuracy": 0.33736473583704646,
+      "macro_f1": 0.16817388545137235
+    },
+    {
+      "model": "Length-only baseline (Word_Count only)",
+      "accuracy": 0.6629535327816677,
+      "macro_f1": 0.6701035046657003
+    },
+    {
+      "model": "RF without length-coupled features",
+      "accuracy": 0.46499045194143857,
+      "macro_f1": 0.45864039614037244
+    },
+    {
+      "model": "RF on residualised features (regressed on log WC)",
+      "accuracy": 0.6623169955442393,
+      "macro_f1": 0.6665134438403554
+    }
+  ],
+  "source_distributions": {
+    "OASST1": {
+      "n": 15708,
+      "low_share": 0.3860453272217978,
+      "moderate_share": 0.22580850522026993,
+      "high_share": 0.38814616755793224,
+      "mean_conf": 0.5718546073293405,
+      "std_conf": 0.1431181478829673
+    },
+    "LMSYS Arena": {
+      "n": 39316,
+      "low_share": 0.4697069895208058,
+      "moderate_share": 0.167921456913216,
+      "high_share": 0.3623715535659782,
+      "mean_conf": 0.5986524290493347,
+      "std_conf": 0.1491474176792935
+    },
+    "ChatGPT Prompts": {
+      "n": 153,
+      "low_share": 0.0,
+      "moderate_share": 0.013071895424836602,
+      "high_share": 0.9869281045751634,
+      "mean_conf": 0.7793319582924747,
+      "std_conf": 0.12630325989924734
+    }
+  },
+  "dependency_summary": {
+    "OASST Users": {
+      "n": 4721,
+      "mean": 12.118242585330712,
+      "median": 9.866666666666667,
+      "std": 9.128571736236843,
+      "low_count": 1599,
+      "mod_count": 1550,
+      "high_count": 1572
+    },
+    "LMSYS Judges": {
+      "n": 13383,
+      "mean": 16.19650409915454,
+      "median": 16.33752735229759,
+      "std": 13.66704296413589,
+      "low_count": 4521,
+      "mod_count": 7481,
+      "high_count": 1381
+    },
+    "Surveyed Students": {
+      "n": 3614,
+      "mean": 44.13659841357683,
+      "median": 43.99999999999999,
+      "std": 17.912501446421174,
+      "low_count": 1205,
+      "mod_count": 1213,
+      "high_count": 1196
+    }
+  },
+  "survey_correlations": {
+    "daily_usage_hours": {
+      "spearman_rho": 0.6876727369385908,
+      "p_value": 0.0
+    },
+    "trust_in_ai_tools": {
+      "spearman_rho": 0.34889244174580825,
+      "p_value": 5.96165083935709e-104
+    }
+  },
+  "weight_sensitivity": {
+    "OASST Users": {
+      "mean": 0.9991650476121186,
+      "p5": 0.9979502637287873
+    },
+    "LMSYS Judges": {
+      "mean": 0.9988389304382754,
+      "p5": 0.9973918514317994
+    },
+    "Surveyed Students": {
+      "mean": 0.9901147461789432,
+      "p5": 0.977407775482339
+    }
+  }
+}
